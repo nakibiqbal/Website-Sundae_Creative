@@ -1,9 +1,11 @@
 import './App.css'
+import Navbar from './NAVBAR/Navbar'
 
 function App() {
+
   return (
     <>
-      <h1>BOILER PLATE OF REACT.JS</h1>
+      <Navbar />
     </>
   )
 }
