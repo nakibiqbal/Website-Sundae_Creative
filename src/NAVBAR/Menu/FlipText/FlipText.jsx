@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 export const FlipText = ({ children, classOne, classTwo }) => {
     const transitionAnimate = { duration: 0, ease: [0.215, 0.61, 0.355, 1], delay: 0.5, type: "tween" }
-    const transitionExit = { duration: 0, ease: [0.215, 0.61, 0.355, 1], delay: 0, type: "tween" }
+    const transitionExit = { duration: 0, ease: [0.215, 0.61, 0.355, 1], delay: 0.3, type: "tween" }
     return (
         <div className={classOne ? `textAnimLogic ${classOne}` : "textAnimLogic"} >
             <div className={classTwo ? `rotate ${classTwo}` : "rotate"}>
