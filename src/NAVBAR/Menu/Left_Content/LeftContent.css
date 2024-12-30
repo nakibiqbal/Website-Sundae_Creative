@@ -72,9 +72,12 @@
 @media (max-width: 768px) {
   .menuLeftContent {
     gap: 5rem;
+    justify-content: center;
+    height: 20%;
   }
   .leftContentBottom {
     gap: 40px;
+    padding: 0;
   }
   .linkInsta {
     gap: 10px;

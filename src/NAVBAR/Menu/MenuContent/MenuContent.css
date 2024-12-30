@@ -23,5 +23,6 @@
 @media (max-width: 768px) {
   .menuContentWrapper {
     padding: 0rem 1rem;
+    justify-content: space-evenly;
   }
 }

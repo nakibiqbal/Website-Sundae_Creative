@@ -71,27 +71,44 @@
   }
   .rightText {
     justify-content: center;
+    width: 100%;
   }
 }
 @media (max-width: 768px) {
   .menuRightContent {
-    padding-top: 4rem;
-    padding-bottom: 0;
+    padding: 0;
     gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
   }
+
   .rightContent {
     gap: 5px;
   }
   .number p {
     font-size: 2.5vh;
     letter-spacing: 0px;
-    line-height: 2.5vh;
+    line-height: 3vh;
   }
   .forRight {
     height: 5vh;
   }
   .rotateForRight p {
     font-size: 4vh;
-    line-height: 5vh;
+    line-height: 4vh;
+  }
+  .rightText:hover {
+    .rotate {
+      transform: translateY(-100%);
+    }
+    .rotate:nth-child(1) p:nth-child(1) {
+      transform: rotate(0deg) translateY(0px);
+      clip-path: none;
+    }
+    .rotate:nth-child(2) p:nth-child(1) {
+      transform: rotate(0deg) translateX(0px) translateY(0px);
+      clip-path: none;
+    }
   }
 }

@@ -12,9 +12,9 @@ export const FlipText = ({ children, classOne, classTwo }) => {
             </div>
             <div className={classTwo ? `rotate ${classTwo}` : "rotate"}>
                 <motion.p
-                    initial={{ marginTop: 80 }}
+                    initial={{ marginTop: -80 }}
                     animate={{ marginTop: 0, transition: transitionAnimate }}
-                    exit={{ marginTop: 80, transition: transitionExit }}
+                    exit={{ marginTop: -80, transition: transitionExit }}
                     className={classTwo ? `rotate ${classTwo}` : "rotate"}>
                     {children}
                 </motion.p>
