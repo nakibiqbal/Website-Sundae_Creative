@@ -30,9 +30,11 @@ const Navbar = () => {
     ]
 
     return (
-        <section className="navSection">
+        <section
+            className="navSection">
+
             <div className="navbarWrapper">
-                <a href="#" onClick={() => setOnClick(!onClick)}>
+                <a href="#" onClick={(e) => { e.preventDefault(); setOnClick(!onClick) }}>
                     <div className="menuClose">
                         {menu.map((menus, index) => {
                             return <motion.p
@@ -52,9 +54,10 @@ const Navbar = () => {
                         </>
                     }
                 </AnimatePresence>
-                <a href="#"><img src={logo} /></a>
-                <a href="#">let&apos;s talk</a>
+                <a href="#" onClick={(e) => e.preventDefault()}><img src={logo} /></a>
+                <a href="#" onClick={(e) => e.preventDefault()}>let&apos;s talk</a>
             </div>
+
         </section>
     )
 }

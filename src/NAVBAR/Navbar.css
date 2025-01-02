@@ -1,12 +1,14 @@
-@import url("https://fonts.cdnfonts.com/css/switzer");
-
 .navSection {
   font-family: "Switzer", sans-serif;
   width: 100%;
   height: 4rem;
-  background: white;
+  top: 0;
+  left: 0;
   padding: 0 1.3rem;
   position: fixed;
+  z-index: 9;
+  background: #010c09de;
+  backdrop-filter: invert(1);
 }
 .navbarWrapper {
   display: flex;
@@ -14,18 +16,19 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  z-index: 9;
 }
+
 .navbarWrapper a {
   font-size: 13px;
   text-transform: uppercase;
   text-decoration: none;
   color: white;
+  font-weight: 500;
   z-index: 9;
-  mix-blend-mode: difference;
 }
+
 .navbarWrapper img {
-  width: 120px;
+  width: 130px;
 }
 
 .menuClose {
