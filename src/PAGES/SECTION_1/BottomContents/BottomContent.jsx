@@ -6,9 +6,9 @@ import './BottomContent.css';
 const BottomContent = ({ isLargeScreen, ParallaxMovement }) => {
     return (
         <motion.div
-            initial={{ opacity: 0 }}
+            initial={{ opacity: isLargeScreen ? 0 : 1 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1.25, ease: [0.86, 0, 0.07, 1] }}
+            transition={{ duration: isLargeScreen ? 1.25 : 0, ease: [0.86, 0, 0.07, 1] }}
             className="conOFsec1TWO">
 
             <motion.span
@@ -22,7 +22,7 @@ const BottomContent = ({ isLargeScreen, ParallaxMovement }) => {
             <motion.img
                 initial={{ clipPath: "polygon(0 0, 0% 0, 0% 100%, 0 100%)", }}
                 animate={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", }}
-                transition={{ duration: 1.25, delay: 0.5, ease: [0.86, 0, 0.07, 1] }}
+                transition={{ duration: 1.25, delay: isLargeScreen ? 0.5 : 0, ease: [0.86, 0, 0.07, 1] }}
                 className="bottomImg" src={img2} />
             <motion.span
                 style={{
