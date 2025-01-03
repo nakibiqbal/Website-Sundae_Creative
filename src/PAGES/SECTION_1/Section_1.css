@@ -63,11 +63,18 @@ section#section1 {
 @media (max-width: 600px) {
   section#section1 {
     padding-top: 0vh;
+    height: 65rem;
   }
   .sec1Wrapper {
     padding: 0;
   }
   .conOFsec1TWO {
     padding: 2rem 0rem;
+  }
+}
+
+@media (max-width: 500px) {
+  section#section1 {
+    height: 55rem;
   }
 }
