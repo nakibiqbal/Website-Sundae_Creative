@@ -8,12 +8,9 @@ const useAnimationBasic = () => {
 
   const variants = {
     initial: {
-      // y: -50,
-      // rotate: -5,
-      // x: -10,
-      y: 0,
-      rotate: 0,
-      x: 0,
+      y: -50,
+      rotate: -5,
+      x: -10,
       visibility: "visible",
     },
     view: {
