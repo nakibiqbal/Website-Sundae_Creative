@@ -1,10 +1,10 @@
 import { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
-import useAnimations from "../../ANIMATIONS/useAnimations";
 import "./Section_1.css";
 import img2 from "/Images/img2.jpg";
 import FancyText from "./FancyTexts/FancyText";
 import BottomContent from "./BottomContents/BottomContent";
+import useAnimationScroll from "../../ANIMATIONS/useAnimationScroll";
 
 const Section_1 = () => {
     const sectionRef = useRef(null);
@@ -13,7 +13,7 @@ const Section_1 = () => {
         offset: ["start", "end"],
     });
     // custom hook for animations
-    const { isLargeScreen, imgDivRef, imgRef, ParallaxMovement } = useAnimations(scrollYProgress, sectionRef);
+    const { isLargeScreen, imgDivRef, imgRef, ParallaxMovement } = useAnimationScroll(scrollYProgress, sectionRef);
 
     return (
         <section ref={sectionRef} id="section1">

@@ -5,7 +5,7 @@ import { useTransform } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const useAnimations = (scrollYProgress, sectionRef) => {
+const useAnimationScroll = (scrollYProgress, sectionRef) => {
     const imgDivRef = useRef(null);
     const imgRef = useRef(null);
     const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1000);
@@ -57,7 +57,13 @@ const useAnimations = (scrollYProgress, sectionRef) => {
     // Logic for parallax movement
     const ParallaxMovement = (start, end) => useTransform(scrollYProgress, [0, 1], [start, end]);
     // Return values
-    return { isLargeScreen, imgDivRef, imgRef, ParallaxMovement };
+
+    return {
+        isLargeScreen,
+        imgDivRef,
+        imgRef,
+        ParallaxMovement,
+    };
 };
 
-export default useAnimations;
+export default useAnimationScroll;
