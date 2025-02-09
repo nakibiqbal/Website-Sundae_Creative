@@ -42,6 +42,20 @@
   overflow: hidden;
 }
 
+.sec2BtnTxt {
+  text-align: center;
+  width: 15rem;
+  margin: auto;
+  transform: translateY(-80px);
+}
+.sec2BtnTxt h6 {
+  color: #f34848;
+}
+
+.sec2BtnTxt span {
+  color: black;
+}
+
 @media (max-width: 840px) {
   .sec2TextButton {
     padding: 0;
@@ -52,5 +66,8 @@
   }
   .word p {
     font-size: 34px;
+  }
+  .sec2BtnTxt {
+    transform: translateY(20px);
   }
 }

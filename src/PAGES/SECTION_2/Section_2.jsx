@@ -5,7 +5,7 @@ import "./Section_2.css";
 
 const Section_2 = () => {
 
-    const { textRef } = useAnimationBasic();
+    const { textRef1 } = useAnimationBasic();
 
     const text =
         "We narrate the distinctive and captivating stories of some of the world's most desirable brands. Our specialties include public relations, social media management, content creation, and brand partnerships, enabling us to link our clients with leading influencers, media outlets and their target audiences.";
@@ -17,11 +17,11 @@ const Section_2 = () => {
 
                 <div className="sec2TextButton">
 
-                    <div className="theText2" ref={textRef}>
+                    <div className="theText2" ref={textRef1}>
 
                         {text.split(" ").map((word, index) => (
                             <div className="word" key={index}>
-                                <p>{word}</p>
+                                <p className="xyrAnim">{word}</p>
                             </div>
                         ))}
 
@@ -32,6 +32,10 @@ const Section_2 = () => {
                 </div>
 
                 <ImgSec2 />
+                <div className="sec2BtnTxt">
+                    <h6>(001)</h6>
+                    <span>Disclaimer: May Cause Brand Awareness</span>
+                </div>
 
             </div>
 
