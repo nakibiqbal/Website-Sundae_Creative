@@ -21,7 +21,7 @@ const Section_2 = () => {
 
                         {text.split(" ").map((word, index) => (
                             <div className="word" key={index}>
-                                <p className="xyrAnim">{word}</p>
+                                <h4 className="xyrAnim">{word}</h4>
                             </div>
                         ))}
 

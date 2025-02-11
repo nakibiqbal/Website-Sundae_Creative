@@ -81,7 +81,7 @@ section#section_3 {
 @media (max-width: 1200px) {
   section#section_3 {
     height: 100vh;
-    margin: 1rem 0rem;
+    margin-top: 1rem;
   }
   .sec3span {
     display: none;

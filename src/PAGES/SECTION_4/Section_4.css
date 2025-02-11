@@ -1,0 +1,47 @@
+section#section_4 {
+  width: 100%;
+  height: 70vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.absImg1 {
+  position: absolute;
+  z-index: 5;
+  width: 13rem;
+  height: 8rem;
+  top: 50%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+}
+
+.absImg1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+h6.num02 {
+  position: absolute;
+  top: 20%;
+  left: 41.6%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  color: #f34848;
+}
+@media (max-width: 1000px) {
+  section#section_4 {
+    height: 85vh;
+  }
+}
+@media (max-width: 700px) {
+  section#section_4 {
+    height: 100%;
+  }
+  .absImg1 {
+    display: none;
+  }
+  h6.num02 {
+    display: none;
+  }
+}

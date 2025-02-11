@@ -30,7 +30,7 @@
   column-gap: 5px;
   line-height: 2.7vw; /* Converted from 52px to vw */
 }
-.word p {
+.word h4 {
   font-family: "Canela Condensed Trial";
   font-size: 2.8vw; /* Converted from 54px to vw */
   text-transform: uppercase;
@@ -64,7 +64,7 @@
     height: 36px;
     padding: 15px 0px;
   }
-  .word p {
+  .word h4 {
     font-size: 34px;
   }
   .sec2BtnTxt {

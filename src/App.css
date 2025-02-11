@@ -26,11 +26,25 @@ h1 {
   line-height: 180px;
   letter-spacing: -5px;
 }
+h3 {
+  font-family: "Anton";
+  font-size: 62px;
+  font-weight: 100;
+  letter-spacing: -2px;
+  word-spacing: -5px;
+  line-height: 4rem;
+}
 h6 {
   font-family: "Canela Condensed Trial", sans-serif;
   font-size: 34px;
   font-weight: 100;
   letter-spacing: -1px;
+}
+h5 {
+  font-family: "Switzer";
+  font-weight: 300;
+  font-size: 17px;
+  width: 16vw;
 }
 
 @media (max-width: 1500px) {
@@ -38,6 +52,22 @@ h6 {
     font-size: 12.6vw;
     line-height: 12vw;
     letter-spacing: -0.5vw;
+  }
+}
+@media (max-width: 1200px) {
+  h5 {
+    font-size: 14px;
+    width: 15vw;
+  }
+}
+@media (max-width: 1000px) {
+  h3 {
+    font-size: 46px;
+    letter-spacing: -2px;
+    word-spacing: -2px;
+  }
+  h5 {
+    width: 22vw;
   }
 }
 @media (max-width: 700px) {
