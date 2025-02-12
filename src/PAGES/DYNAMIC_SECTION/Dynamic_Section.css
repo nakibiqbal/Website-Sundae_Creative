@@ -73,13 +73,17 @@
   }
   .dynamicContentLeft {
     width: 100%;
-    transform: translateY(30px);
     z-index: 5;
+  }
+  .textForTheLeft {
+    transform: translateY(-9rem);
+    gap: 3rem;
   }
   h3 {
     font-size: 62px;
     letter-spacing: -2px;
     word-spacing: -2px;
+    line-height: 4rem;
   }
   h5 {
     width: 100%;
@@ -96,15 +100,17 @@
     height: 7.5rem;
     margin: auto;
     object-fit: cover;
-    margin-top: -5rem;
     z-index: 9;
     position: relative;
+    margin-bottom: -5rem;
+    margin-top: 5rem;
   }
   .num02Mob {
     color: #f34848;
     margin: auto;
     font-size: 26px;
-    margin-top: -2rem;
+    margin-top: 2rem;
     display: inline;
+    margin-bottom: -5rem;
   }
 }
