@@ -27,7 +27,9 @@ const Section_2 = () => {
 
                     </div>
 
-                    <Button />
+                    <div className="btn_sec2">
+                        <Button btnText="about us" />
+                    </div>
 
                 </div>
 

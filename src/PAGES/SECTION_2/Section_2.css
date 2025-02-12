@@ -56,6 +56,10 @@
   color: black;
 }
 
+.btn_sec2 {
+  width: 8rem;
+  height: 3rem;
+}
 @media (max-width: 840px) {
   .sec2TextButton {
     padding: 0;

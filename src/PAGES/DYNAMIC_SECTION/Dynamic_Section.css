@@ -90,6 +90,7 @@
   }
   .dynamicContentRight {
     width: 100%;
+    justify-content: flex-end;
   }
   .imgForTheRight img {
     transform: scale(1);

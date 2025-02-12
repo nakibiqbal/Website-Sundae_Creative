@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import { motion } from "framer-motion"
 import useAnimationBasic from "../ANIMATIONS/useAnimationBasic";
 import "./Button.css"
 
-const Button = () => {
+const Button = ({ btnText }) => {
     const { mouseEnter, mouseLeave, variants, isHovered } = useAnimationBasic();
 
     return (
@@ -40,7 +41,7 @@ const Button = () => {
                                     : 0, transition: "opacity 0.1s ease-in-out"
                         }}
                     >
-                        about us
+                        {btnText}
                     </motion.button>
                 })}
             </div>
