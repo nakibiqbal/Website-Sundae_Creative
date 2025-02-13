@@ -5,6 +5,7 @@ import imgRight from "/Images/imgRight.jpg"
 import smallImage1 from "/Images/smallImage1.jpg"
 import { motion, useScroll } from "framer-motion"
 import useAnimationScroll from "../../ANIMATIONS/useAnimationScroll"
+import { useClipPathAnimation } from "../../ANIMATIONS/useClipPathAnimation"
 
 const Section_4 = () => {
 
@@ -21,7 +22,9 @@ const Section_4 = () => {
 
                 <h6 className="num02">(02)</h6>
                 <div className="absImg1">
-                    <motion.img style={{ y: ParallaxMovement(-100, 100) }} src={smallImage1} />
+                    <motion.img
+                        {...useClipPathAnimation}
+                        style={{ y: ParallaxMovement(-100, 100) }} src={smallImage1} />
                 </div>
 
                 <Dynamic_Section

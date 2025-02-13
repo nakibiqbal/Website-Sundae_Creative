@@ -5,6 +5,7 @@ import img2 from "/Images/img2.jpg";
 import FancyText from "./FancyTexts/FancyText";
 import BottomContent from "./BottomContents/BottomContent";
 import useAnimationScroll from "../../ANIMATIONS/useAnimationScroll";
+import { useClipPathAnimation } from "../../ANIMATIONS/useClipPathAnimation";
 
 const Section_1 = () => {
     const sectionRef = useRef(null);
@@ -21,9 +22,7 @@ const Section_1 = () => {
             <div className="conOFsec1THREE">
                 <div className="stickImg">
                     <motion.div
-                        initial={{ clipPath: "polygon(0 0, 0% 0, 0% 100%, 0 100%)", }}
-                        animate={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", }}
-                        transition={{ duration: 1.25, ease: [0.86, 0, 0.07, 1] }}
+                        {...useClipPathAnimation}
                         ref={imgDivRef} style={{ overflow: "hidden" }}>
                         <img ref={imgRef} src={img2} />
                     </motion.div>

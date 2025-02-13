@@ -4,6 +4,7 @@ import { motion, useScroll } from "framer-motion"
 import useAnimationScroll from "../../ANIMATIONS/useAnimationScroll";
 import { useRef } from "react";
 import Button from "../../BUTTON/Button";
+import { useClipPathAnimation } from "../../ANIMATIONS/useClipPathAnimation";
 
 
 const Dynamic_Section = (
@@ -30,6 +31,24 @@ const Dynamic_Section = (
 
     }) => {
 
+    const headingVariants = {
+        hidden: {
+            clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)", // Initially hidden (top)
+            rotate: -5,
+            y: -10,
+            x: -10,
+        },
+        visible: {
+            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", // Reveal downwards
+            rotate: 0,
+            y: 0,
+            x: 0,
+            transition: { duration: 1.5, ease: [0.22, 1, 0.36, 1] }
+        }
+    };
+
+
+
     const imgMob = useRef(null);
     const { scrollYProgress } = useScroll({
         target: imgMob,
@@ -45,18 +64,37 @@ const Dynamic_Section = (
             <div
                 className={dyConClass6 ? `dynamicContentLeft ${dyConClass6}` : dyConClass9 ? `dynamicContentLeft ${dyConClass9}` : "dynamicContentLeft"}>
                 {textForTheLeft && <div className={txtFTLeftEx ? `${textForTheLeft} ${txtFTLeftEx}` : txtFTLeftEx2 ? `${textForTheLeft} ${txtFTLeftEx2}` : textForTheLeft}>
-                    {imgForMobile && <motion.img className="imgForMobile" style={{ x: ParallaxMovement(-100, 100) }} src={imgForMobile} />}
+                    {imgForMobile && <motion.img {...useClipPathAnimation} className="imgForMobile" style={{ x: ParallaxMovement(-100, 100) }} src={imgForMobile} />}
                     {numForMobile && <h6 className="num02Mob">{numForMobile}</h6>}
                     <span>{text_one}</span>
-                    <div className="head3">
-                        <h3>{text_two}</h3>
-                        {text_two_2 && <h3>{text_two_2}</h3>}
-                        {text_two_3 && <h3>{text_two_3}</h3>}
-                        {text_two_4 && <h3>{text_two_4}</h3>}
-                        {text_two_5 && <h3>{text_two_5}</h3>}
-                    </div>
-                    <h5>{text_three}</h5>
-                    {button && <div className="dynamicButton"> <Button btnText={button} /> </div>}
+
+                    <motion.div
+                        className="head3"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                    >
+                        <motion.h3 variants={headingVariants}>{text_two}</motion.h3>
+                        {[text_two_2, text_two_3, text_two_4, text_two_5].map((text, index) => text && <motion.h3 key={index} variants={headingVariants}>{text}</motion.h3>)}
+                    </motion.div>
+                    <motion.h5
+                        initial={{ y: 50, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            duration: 1.5, ease: [0.22, 1, 0.36, 1]
+                        }}
+                    >
+                        {text_three}
+                    </motion.h5>
+                    {button && <motion.div
+                        initial={{ y: 100, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            duration: 1.5, ease: [0.22, 1, 0.36, 1]
+                        }}
+                        className="dynamicButton"> <Button btnText={button} /> </motion.div>}
                 </div>}
 
             </div>
@@ -66,7 +104,9 @@ const Dynamic_Section = (
                 {imgForTheRight && <div className={imgClassName ? `imgForTheRight ${imgClassName}` : "imgForTheRight"}>
                     <img src={imgForTheRight} />
                 </div>}
-                {oneMoreImg && <img className="oneMoreImg" src={oneMoreImg} />}
+                {oneMoreImg && <motion.img className="oneMoreImg"
+                    {...useClipPathAnimation}
+                    src={oneMoreImg} />}
 
             </div>
 
