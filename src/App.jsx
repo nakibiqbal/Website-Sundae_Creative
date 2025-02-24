@@ -1,6 +1,6 @@
 import './App.css'
 import useLenis from './LENIS/useLenis'
-import Right_Img from './PAGES/RIGHT_IMG_SEC/RIGHT_Img'
+import Right_Img from './PAGES/RIGHT_IMG_SEC/Right_Img'
 import Section_1 from './PAGES/SECTION_1/Section_1'
 import Section_2 from './PAGES/SECTION_2/Section_2'
 import Section_3 from './PAGES/SECTION_3/Section_3'
