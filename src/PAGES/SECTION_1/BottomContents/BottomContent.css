@@ -1,0 +1,32 @@
+.conOFsec1TWO {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 1rem;
+  overflow: hidden;
+}
+.conOFsec1TWO span {
+  width: 13rem;
+}
+.bottomImg {
+  display: none;
+}
+@media (max-width: 1000px) {
+  .bottomImg {
+    width: 14rem;
+    display: inline;
+  }
+  .conOFsec1TWO {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  .conOFsec1TWO {
+    padding: 1rem 0rem;
+  }
+  .bottomImg {
+    width: 100%;
+  }
+}

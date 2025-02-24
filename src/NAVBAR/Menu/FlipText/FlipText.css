@@ -1,0 +1,80 @@
+.textAnimLogic {
+  height: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+.rotate p {
+  line-height: 45px;
+  font-size: 46px;
+  font-family: "Anton", serif;
+  text-transform: uppercase;
+}
+.rotate {
+  transform: translateY(-100%);
+  transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.rotate:nth-child(1) p:nth-child(1) {
+  transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: rotate(-10deg) translateY(-100px);
+  color: #f34848;
+  clip-path: polygon(0% 100%, 1000% 100%, 0% 100%, 0% 0%);
+}
+.rotate:nth-child(2) p:nth-child(1) {
+  transform: rotate(0) translateX(0px) translateY(0px);
+  transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+  clip-path: polygon(0% 0%, 1000% 100%, 0% 100%, 0% 0%);
+  color: white;
+}
+.textAnimLogic:hover {
+  .rotate {
+    transform: translateY(0%);
+  }
+  .rotate:nth-child(1) p:nth-child(1) {
+    transform: rotate(0deg) translateY(0px);
+    clip-path: polygon(0% 0%, 1000% 100%, 0% 100%, 0% 0%);
+  }
+  .rotate:nth-child(2) p:nth-child(1) {
+    transform: rotate(10deg) translateX(-10px) translateY(100px);
+    clip-path: polygon(0% 100%, 1000% 100%, 0% 100%, 0% 0%);
+  }
+}
+
+@media (max-width: 768px) {
+  .textAnimLogic {
+    height: 3.5vh;
+  }
+  .rotate p {
+    line-height: 3.5vh;
+    font-size: 3vh;
+  }
+
+  .rotate {
+    transform: translateY(-100%);
+    transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  .rotate:nth-child(1) p:nth-child(1) {
+    transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: rotate(0deg) translateY(0px);
+    color: #f34848;
+    clip-path: none;
+  }
+  .rotate:nth-child(2) p:nth-child(1) {
+    transform: rotate(0) translateX(0px) translateY(0px);
+    transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+    clip-path: none;
+    color: white;
+  }
+  .textAnimLogic:hover {
+    .rotate {
+      transform: translateY(-100%);
+    }
+    .rotate:nth-child(1) p:nth-child(1) {
+      transform: rotate(0deg) translateY(0px);
+      clip-path: none;
+    }
+    .rotate:nth-child(2) p:nth-child(1) {
+      transform: rotate(0deg) translateX(0px) translateY(0px);
+      clip-path: none;
+    }
+  }
+}

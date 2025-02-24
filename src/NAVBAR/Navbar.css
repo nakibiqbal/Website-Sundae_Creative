@@ -1,0 +1,65 @@
+.navSection {
+  font-family: "Switzer", sans-serif;
+  width: 100%;
+  height: 4rem;
+  top: 0;
+  left: 0;
+  padding: 0 1.3rem;
+  position: fixed;
+  z-index: 9;
+  background: #010c09de;
+  backdrop-filter: invert(1);
+}
+.navbarWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.navbarWrapper a {
+  font-size: 13px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  z-index: 9;
+}
+
+.navbarWrapper img {
+  width: 130px;
+}
+
+.menuClose {
+  height: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+.menuClose p {
+  height: 100%;
+}
+.round {
+  background: red;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(0deg);
+  flex-direction: column;
+}
+.clip {
+  clip-path: polygon(0% 110%, 100% 110%, 300% 10%, 0% -10%);
+  background: blue;
+  transition: all 0.5s linear;
+}
+.round:hover {
+  .clip {
+    clip-path: polygon(0% 110%, 100% 110%, 100% 210%, 0% 210%);
+  }
+}

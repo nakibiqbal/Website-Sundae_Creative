@@ -1,0 +1,42 @@
+/* butons */
+.buttonBG {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.buttonBG:first-child {
+  background: #f34848;
+}
+
+.buttonBG:nth-child(2) {
+  background: #1d2120;
+}
+.buttonContainer {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  background: #1d2120;
+}
+
+.button {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 17px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button button {
+  background: transparent;
+  border: none;
+  font-family: "Switzer";
+  text-transform: uppercase;
+  color: white;
+}

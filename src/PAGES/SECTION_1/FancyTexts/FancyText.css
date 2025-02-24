@@ -1,0 +1,95 @@
+.conOFsec1ONE {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.conOFsec1ONE span {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -5px;
+}
+
+.emni {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.ab span {
+  height: 100%;
+  line-height: 8.5vw;
+  font-family: "Canela Condensed Trial";
+  font-size: 13vw;
+  font-weight: 300;
+}
+.cd span {
+  width: 100%;
+  height: 100%;
+  line-height: 9.5vw;
+  font-family: "Anton";
+  font-size: 10vw;
+}
+
+.ab {
+  height: 10.5vw;
+}
+
+.cd {
+  height: 9.5vw;
+}
+@media (max-width: 1270px) {
+  .ab span {
+    line-height: 10.5vw;
+    font-size: 16vw;
+  }
+  .cd span {
+    line-height: 12vw;
+    font-size: 12vw;
+  }
+
+  .ab {
+    height: 13vw;
+  }
+  .cd {
+    height: 11.5vw;
+  }
+}
+@media (max-width: 1000px) {
+  .conOFsec1ONE span {
+    letter-spacing: 0;
+  }
+  .ab span {
+    line-height: 10.5vw;
+    font-size: 16vw;
+  }
+  .cd span {
+    line-height: 12vw;
+    font-size: 12vw;
+  }
+
+  .ab {
+    height: 13vw;
+  }
+  .cd {
+    height: 11.5vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .ab span {
+    line-height: 12.5vw;
+    font-size: 16vw;
+  }
+  .cd span {
+    line-height: 10vw;
+    font-size: 13vw;
+  }
+  .ab {
+    height: 15vw;
+  }
+  .cd {
+    height: 14vw;
+  }
+}
