@@ -1,7 +1,8 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTransform } from "framer-motion";
+import useLargeScreen from "./useLargeScreen";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,11 +11,7 @@ const useAnimationScroll = (scrollYProgress, sectionRef) => {
     const imgDivRef = useRef(null);
     const imgRef = useRef(null);
 
-    const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1000);
-    const [viewportSize, setViewportSize] = useState({
-        width: window.innerWidth,
-        height: window.innerHeight
-    });
+    const { isLargeScreen, viewportSize } = useLargeScreen();
 
     // Convert vw and vh values into pixels
     const toPixels = (value) => {
@@ -70,19 +67,7 @@ const useAnimationScroll = (scrollYProgress, sectionRef) => {
             );
         });
 
-        // Logic for checking screen size
-        const handleResize = () => {
-            setIsLargeScreen(window.innerWidth >= 1000);
-            setViewportSize({
-                width: window.innerWidth,
-                height: window.innerHeight
-            });
-        };
-
-        window.addEventListener("resize", handleResize);
-
         return () => {
-            window.removeEventListener("resize", handleResize);
             ctx.revert(); // ✅ Proper GSAP cleanup
         };
     }, []);

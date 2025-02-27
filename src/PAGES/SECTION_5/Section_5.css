@@ -53,6 +53,9 @@ section#section_5 {
 }
 
 @media (max-width: 1000px) {
+  section#section_5 {
+    padding: 0vw 2vw;
+  }
   .contentBox2 {
     padding-bottom: 1.5rem;
   }

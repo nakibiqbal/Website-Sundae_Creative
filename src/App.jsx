@@ -8,6 +8,7 @@ import Section_4 from './PAGES/SECTION_4/Section_4'
 import Section_5 from './PAGES/SECTION_5/Section_5'
 import Section_6 from './PAGES/SECTION_6/Section_6'
 import Section_7 from './PAGES/SECTION_7/Section_7'
+import Section_8 from './PAGES/SECTION_8/Section_8'
 import Section_9 from './PAGES/SECTION_9/Section_9'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Section_6 />
       <Section_7 />
       <Section_9 />
+      <Section_8 />
       <div style={{ width: "100%", height: "100vh", background: "white" }}></div>
     </>
   )
