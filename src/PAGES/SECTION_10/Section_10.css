@@ -1,4 +1,4 @@
-#section_8 {
+#section_10 {
   position: relative;
   width: 100%;
   height: 170vw;
@@ -47,7 +47,7 @@
   font-family: "Anton";
   font-weight: 100;
 }
-.img8Parent {
+.img10Parent {
   width: 16vw;
   height: 100%;
   overflow: hidden;
@@ -100,7 +100,7 @@
 }
 
 @media (max-width: 1000px) {
-  #section_8 {
+  #section_10 {
     width: 100%;
     height: 100%;
     padding: 0vw 2vw;
@@ -124,7 +124,7 @@
     width: 100%;
     height: 100%;
   }
-  .img8Parent {
+  .img10Parent {
     width: 45vw;
   }
   .txtBtnContent {

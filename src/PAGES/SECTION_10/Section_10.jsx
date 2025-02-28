@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import './Section_8.css';
+import './Section_10.css';
 import useLargeScreen from "../../ANIMATIONS/useLargeScreen"
 import CustomCursor from '../../CURSOR/CustomCursor';
 import { useRef, useState } from 'react';
@@ -8,17 +8,17 @@ import useAnimationBasic from '../../ANIMATIONS/useAnimationBasic';
 import useAnimationScroll from '../../ANIMATIONS/useAnimationScroll';
 import useClipPathAnimation2 from '../../ANIMATIONS/useClipPathAnimation2';
 
-const Section_8 = () => {
+const Section_10 = () => {
 
-    const section8Ref = useRef(null);
+    const section10Ref = useRef(null);
     const [cursorVis, setCursorVis] = useState(false);
     const { isLargeScreen } = useLargeScreen();
 
     const { scrollYProgress } = useScroll({
-        target: section8Ref,
+        target: section10Ref,
         offset: ["start start", "end end"]
     });
-    const { ParallaxMovement } = useAnimationScroll(scrollYProgress, section8Ref);
+    const { ParallaxMovement } = useAnimationScroll(scrollYProgress, section10Ref);
     const headingVariants = useClipPathAnimation2()
 
     const contentData = [
@@ -64,7 +64,7 @@ const Section_8 = () => {
         <section
             onMouseEnter={() => setCursorVis(true)}
             onMouseLeave={() => setCursorVis(false)}
-            ref={section8Ref} id="section_8">
+            ref={section10Ref} id="section_10">
 
             <motion.div
                 style={{
@@ -87,7 +87,7 @@ const Section_8 = () => {
 
                             <div className="stickConChild">
                                 <div className="imgNum">
-                                    <div className="img8Parent">
+                                    <div className="img10Parent">
                                         <img src={content.img} alt="img" />
                                     </div>
                                     <span>0{index + 1}</span>
@@ -156,11 +156,11 @@ const Section_8 = () => {
 
             </motion.div>
 
-            <CustomCursor sectionRef={section8Ref} cursorVis={cursorVis} />
+            <CustomCursor sectionRef={section10Ref} cursorVis={cursorVis} />
 
         </section>
     );
 };
 
-export default Section_8;
+export default Section_10;
 
