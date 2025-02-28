@@ -10,6 +10,7 @@ import Section_6 from './PAGES/SECTION_6/Section_6'
 import Section_7 from './PAGES/SECTION_7/Section_7'
 import Section_10 from './PAGES/SECTION_10/Section_10'
 import Section_9 from './PAGES/SECTION_9/Section_9'
+import Section_8 from './PAGES/SECTION_8/Section_8'
 
 function App() {
   useLenis()
@@ -23,6 +24,7 @@ function App() {
       <Right_Img />
       <Section_6 />
       <Section_7 />
+      <Section_8 />
       <Section_9 />
       <Section_10 />
       <div style={{ width: "100%", height: "100vh", background: "white" }}></div>
