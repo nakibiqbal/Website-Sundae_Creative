@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import "./Navbar.css"
 import Menu from "./Menu/Menu"
@@ -29,10 +29,19 @@ const Navbar = () => {
         }
     ]
 
-    return (
-        <section
-            className="navSection">
+    useEffect(() => {
+        if (onClick) {
+            document.body.style.overflow = 'hidden';
+            document.body.style.marginTop = '5rem';
+            document.body.style.transition = "all 1s cubic-bezier(0.87, 0, 0.13, 1)"
+        } else {
+            document.body.style.overflow = 'auto';
+            document.body.style.marginTop = '0';
+        }
+    }, [onClick]);
 
+    return (
+        <section className="navSection">
             <div className="navbarWrapper">
                 <a href="#" onClick={(e) => { e.preventDefault(); setOnClick(!onClick) }}>
                     <div className="menuClose">
@@ -57,7 +66,6 @@ const Navbar = () => {
                 <a href="#" onClick={(e) => e.preventDefault()}><img src={logo} /></a>
                 <a href="#" onClick={(e) => e.preventDefault()}>let&apos;s talk</a>
             </div>
-
         </section>
     )
 }

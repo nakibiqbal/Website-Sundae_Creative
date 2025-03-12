@@ -1,0 +1,93 @@
+.foot_btnTxt {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  gap: 5px;
+}
+.foot_btnTxt:first-child {
+  background: white;
+  color: black;
+  z-index: 9;
+}
+.foot_btnTxt h4 {
+  line-height: 3rem;
+  overflow: hidden;
+  font-weight: 300;
+}
+.parent_h4 {
+  height: 3rem;
+  overflow: hidden;
+}
+
+.threeBtn {
+  display: flex;
+  width: 50rem;
+  background: white;
+  height: 11rem;
+}
+.threeBtn_childs {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background: #1d2120;
+  transition: all 0.5s ease;
+}
+.threeBtn_childs:nth-child(2) {
+  border: 1px solid white;
+}
+.threeBtn_childs:last-child {
+  border: 1px solid white;
+  border-left: none;
+}
+.threeBtn_childs:first-child {
+  border: 1px solid white;
+  border-right: none;
+}
+
+.selected {
+  border: none !important;
+  border-radius: 1.5rem;
+}
+
+.clicky_info {
+  position: relative;
+  width: 100%;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.clicky_info a {
+  color: white;
+  text-decoration: none;
+  text-transform: lowercase;
+  font-family: "Switzer";
+  font-size: 20px;
+}
+
+@media (max-width: 1000px) {
+  .threeBtn {
+    height: 8rem;
+  }
+}
+@media (max-width: 900px) {
+  .threeBtn {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .threeBtn {
+    width: 70%;
+    flex-direction: column;
+    height: 15rem;
+  }
+  .threeBtn_childs {
+    border: 1px solid white !important;
+  }
+}

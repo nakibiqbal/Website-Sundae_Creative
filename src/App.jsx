@@ -27,7 +27,6 @@ function App() {
       <Section_8 />
       <Section_9 />
       <Section_10 />
-      <div style={{ width: "100%", height: "100vh", background: "white" }}></div>
     </>
   )
 }

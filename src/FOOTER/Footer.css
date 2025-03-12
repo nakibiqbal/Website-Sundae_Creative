@@ -1,0 +1,108 @@
+section#footer {
+  width: 100%;
+  height: 100%;
+  background: #1d2120;
+  color: white;
+  padding: 10rem 0rem;
+}
+.footerWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 12rem;
+}
+
+.foot1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-transform: uppercase;
+  gap: 3.5rem;
+}
+
+.foot1 h2 {
+  font-family: "Anton";
+  font-size: 58px;
+  font-weight: 100;
+  letter-spacing: -1px;
+  word-spacing: -5px;
+}
+
+.foot1 span {
+  width: 12rem;
+}
+
+.foot1 h4 {
+  font-family: "Canela Condensed Trial";
+  font-size: 34px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.dulWeb {
+  width: 85%;
+  height: 10rem;
+  background: white;
+}
+span.icon {
+  width: 0;
+  font-size: 30px;
+  font-weight: 100;
+  transform: translateY(5px);
+}
+.dulWeb span:first-child {
+  width: 10rem;
+}
+.dulWebChild {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #1d2120;
+  border: 1px solid white;
+  transition: all 0.3s ease;
+}
+.dulWebChild:hover {
+  border: 1px solid transparent;
+  border-radius: 30px;
+}
+
+@media (max-width: 1000px) {
+  .foot1 {
+    gap: 1.5rem;
+  }
+
+  .foot1 h2 {
+    font-size: 44px;
+    letter-spacing: 0px;
+    word-spacing: -6px;
+  }
+  .footerWrapper {
+    gap: 8rem;
+  }
+}
+@media (max-width: 900px) {
+  .foot1 {
+    padding: 0vw 1.5vw;
+  }
+
+  .dulWeb {
+    width: 100%;
+  }
+  .footerWrapper {
+    gap: 5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .dulWeb {
+    height: 6rem;
+  }
+}
