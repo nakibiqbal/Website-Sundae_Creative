@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import { motion } from 'framer-motion';
-import img2 from '/Images/img2.jpg';
 import './BottomContent.css';
 
 const BottomContent = ({ isLargeScreen, ParallaxMovement }) => {
@@ -23,7 +22,7 @@ const BottomContent = ({ isLargeScreen, ParallaxMovement }) => {
                 initial={{ clipPath: "polygon(0 0, 0% 0, 0% 100%, 0 100%)", }}
                 animate={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", }}
                 transition={{ duration: 1.25, delay: isLargeScreen ? 0.5 : 0, ease: [0.86, 0, 0.07, 1] }}
-                className="bottomImg" src={img2} />
+                className="bottomImg" src="https://ik.imagekit.io/nakibKit/img2.jpg?tr=f-auto,q-auto&updatedAt=1748144178322" />
             <motion.span
                 style={{
                     x: isLargeScreen ? ParallaxMovement(0, 200) : 0,
