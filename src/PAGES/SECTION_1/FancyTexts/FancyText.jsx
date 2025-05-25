@@ -36,32 +36,34 @@ const FancyText = ({ ParallaxMovement, isLargeScreen }) => {
 
     return (
         <motion.div style={{ y: isLargeScreen ? ParallaxMovement(0, -100) : 0 }} className="conOFsec1ONE">
-            <div className="emni ab">
-                <motion.span variants={variants}
-                    initial="initialOne"
-                    animate="animateOne"
-                    transition={{
-                        duration: 1.25,
-                        ease: [0.215, 0.61, 0.355, 1],
-                        clipPath: { duration: 4, ease: [0.215, 0.61, 0.355, 1] },
-                    }}
-                >
+            <motion.div
+                variants={variants}
+                initial="initialOne"
+                animate="animateOne"
+                transition={{
+                    duration: 1.25,
+                    ease: [0.215, 0.61, 0.355, 1],
+                    clipPath: { duration: 4, ease: [0.215, 0.61, 0.355, 1] },
+                }}
+                className="emni ab">
+                <span>
                     a new
-                </motion.span>
-            </div>
-            <div className="emni ab">
-                <motion.span variants={variants}
-                    initial="initialOne"
-                    animate="animateOne"
-                    transition={{
-                        duration: 1.25,
-                        ease: [0.215, 0.61, 0.355, 1],
-                        clipPath: { duration: 5, ease: [0.215, 0.61, 0.355, 1] },
-                    }}
-                >
+                </span>
+            </motion.div>
+            <motion.div
+                variants={variants}
+                initial="initialOne"
+                animate="animateOne"
+                transition={{
+                    duration: 1.25,
+                    ease: [0.215, 0.61, 0.355, 1],
+                    clipPath: { duration: 5, ease: [0.215, 0.61, 0.355, 1] },
+                }}
+                className="emni ab">
+                <span>
                     generation
-                </motion.span>
-            </div>
+                </span>
+            </motion.div>
             <motion.div
                 variants={variants}
                 initial="initialTwo"
