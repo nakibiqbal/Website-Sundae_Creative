@@ -36,6 +36,7 @@ const ImgSec2 = () => {
                             scale: ParallaxMovement(scale, 1)
                         }}
                         src={src}
+                        loading="lazy"
                         className={className}
                         alt={`img-${index}`}
                     />

@@ -29,7 +29,7 @@ const Section_3 = () => {
 
         <section ref={sectionThreeRef} id="section_3">
             <div className="imageThree">
-                <motion.img style={{ y: ParallaxMovement(-150, 150), scale: 1.2 }} src="https://ik.imagekit.io/nakibKit/bgImg.jpg?tr=f-auto,q-auto&updatedAt=1748144179308" />
+                <motion.img style={{ y: ParallaxMovement(-150, 150), scale: 1.2 }} loading='lazy' src="https://ik.imagekit.io/nakibKit/bgImg.jpg?tr=f-auto,q-auto&updatedAt=1748144179308" />
             </div>
 
             <div className="content_wrapper">

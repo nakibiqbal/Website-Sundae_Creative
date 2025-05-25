@@ -88,7 +88,7 @@ const Section_10 = () => {
                             <div className="stickConChild">
                                 <div className="imgNum">
                                     <div className="img10Parent">
-                                        <img src={content.img} alt="img" />
+                                        <img src={content.img} alt="img" loading='lazy' />
                                     </div>
                                     <span>0{index + 1}</span>
                                 </div>

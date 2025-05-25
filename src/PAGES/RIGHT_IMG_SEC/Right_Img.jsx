@@ -5,6 +5,7 @@ const Right_Img = () => {
     return (
         <section id="left_imgSection">
             <motion.img
+                loading="lazy"
                 src="https://ik.imagekit.io/nakibKit/RightImg.jpg?tr=f-auto,q-auto&updatedAt=1748144182944"
                 initial={{ clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)" }}
                 whileInView={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }}

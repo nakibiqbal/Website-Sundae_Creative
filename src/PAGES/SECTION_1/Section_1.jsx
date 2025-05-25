@@ -1,10 +1,14 @@
-import { useRef } from "react";
+import { Suspense, useRef, lazy } from "react";
 import { motion, useScroll } from "framer-motion";
 import "./Section_1.css";
 import useAnimationScroll from "../../ANIMATIONS/useAnimationScroll";
 import { useClipPathAnimation } from "../../ANIMATIONS/useClipPathAnimation";
-import FancyText from "./FancyTexts/FancyText";
-import BottomContent from "./BottomContents/BottomContent";
+import FallbackLogic from "../../FallbackLogic";
+// import FancyText from "./FancyTexts/FancyText";
+// import BottomContent from "./BottomContents/BottomContent";
+
+const FancyText = lazy(() => import("./FancyTexts/FancyText"));
+const BottomContent = lazy(() => import("./BottomContents/BottomContent"));
 
 const Section_1 = () => {
     const sectionRef = useRef(null);
@@ -23,15 +27,19 @@ const Section_1 = () => {
                     <motion.div
                         {...useClipPathAnimation}
                         ref={imgDivRef} style={{ overflow: "hidden" }}>
-                        <img ref={imgRef} src="https://ik.imagekit.io/nakibKit/img2.jpg?tr=f-auto,q-auto&updatedAt=1748144178322" />
+                        <img ref={imgRef} src="https://ik.imagekit.io/nakibKit/img2.jpg?tr=f-auto,q-auto&updatedAt=1748144178322" loading="lazy" />
                     </motion.div>
                 </div>
             </div>
 
             <div className="sec1Wrapper">
-                <FancyText ParallaxMovement={ParallaxMovement} isLargeScreen={isLargeScreen} />
 
-                <BottomContent ParallaxMovement={ParallaxMovement} isLargeScreen={isLargeScreen} />
+                <Suspense fallback={<FallbackLogic />}>
+                    <FancyText ParallaxMovement={ParallaxMovement} isLargeScreen={isLargeScreen} />
+                </Suspense>
+                <Suspense fallback={<FallbackLogic />}>
+                    <BottomContent ParallaxMovement={ParallaxMovement} isLargeScreen={isLargeScreen} />
+                </Suspense>
             </div>
 
         </section>

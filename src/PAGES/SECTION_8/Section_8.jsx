@@ -11,13 +11,13 @@ const Section_8 = () => {
             <div className="contentWrapper8">
 
                 <div className="imgRight8">
-                    <motion.img {...useClipPathAnimation} src="https://sundaecreative.com/uploads/pages/home/14_450_Small_image-450w.jpg" />
+                    <motion.img {...useClipPathAnimation} loading="lazy" src="https://sundaecreative.com/uploads/pages/home/14_450_Small_image-450w.jpg" />
                 </div>
 
                 <div className="mainContent8">
 
                     <div className="leftImg8">
-                        <img src="https://sundaecreative.com/uploads/pages/home/13_450_Small_image-450w.jpg" />
+                        <img src="https://sundaecreative.com/uploads/pages/home/13_450_Small_image-450w.jpg" loading="lazy" />
                     </div>
                     <div className="textFounder">
                         <div ref={textRef1} className="parentForTxt">
@@ -28,7 +28,7 @@ const Section_8 = () => {
                             ))}
                         </div>
                         <div className="founder">
-                            <motion.img {...useClipPathAnimation} src="https://sundaecreative.com/uploads/attachments/quote/16_Quote_Kristina_450_Small_image-450w.jpg" />
+                            <motion.img {...useClipPathAnimation} loading="lazy" src="https://sundaecreative.com/uploads/attachments/quote/16_Quote_Kristina_450_Small_image-450w.jpg" />
                             <div className="founderInfo">
                                 <span>Kristina Argento</span>
                                 <span>Co-founder</span>

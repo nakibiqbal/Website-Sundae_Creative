@@ -22,7 +22,7 @@ const Section_4 = () => {
                 <div className="absImg1">
                     <motion.img
                         {...useClipPathAnimation}
-                        style={{ y: ParallaxMovement(-100, 100) }} src="https://ik.imagekit.io/nakibKit/smallImage1.jpg?tr=f-auto,q-auto&updatedAt=1748144182774" />
+                        style={{ y: ParallaxMovement(-100, 100) }} loading="lazy" src="https://ik.imagekit.io/nakibKit/smallImage1.jpg?tr=f-auto,q-auto&updatedAt=1748144182774" />
                 </div>
 
                 <Dynamic_Section

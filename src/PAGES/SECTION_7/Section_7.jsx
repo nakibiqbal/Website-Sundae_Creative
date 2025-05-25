@@ -33,7 +33,7 @@ const Section_7 = () => {
                                     {title}
                                 </motion.h6>
                             </div>
-                            <img src={imageUrl} alt={title} />
+                            <img src={imageUrl} alt={title} loading="lazy" />
                         </div>
                     )
 

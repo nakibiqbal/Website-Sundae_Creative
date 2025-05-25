@@ -47,7 +47,7 @@ const Dynamic_Section = (
             <div
                 className={dyConClass6 ? `dynamicContentLeft ${dyConClass6}` : dyConClass9 ? `dynamicContentLeft ${dyConClass9}` : "dynamicContentLeft"}>
                 {textForTheLeft && <div className={txtFTLeftEx ? `${textForTheLeft} ${txtFTLeftEx}` : txtFTLeftEx2 ? `${textForTheLeft} ${txtFTLeftEx2}` : textForTheLeft}>
-                    {imgForMobile && <motion.img {...useClipPathAnimation} className="imgForMobile" style={{ x: ParallaxMovement(-100, 100) }} src={imgForMobile} />}
+                    {imgForMobile && <motion.img {...useClipPathAnimation} loading="lazy" className="imgForMobile" style={{ x: ParallaxMovement(-100, 100) }} src={imgForMobile} />}
                     {numForMobile && <h6 className="num02Mob">{numForMobile}</h6>}
                     <span>{text_one}</span>
 
@@ -88,6 +88,7 @@ const Dynamic_Section = (
                     <img src={imgForTheRight} />
                 </div>}
                 {oneMoreImg && <motion.img className="oneMoreImg"
+                    loading="lazy"
                     {...useClipPathAnimation}
                     src={oneMoreImg} />}
 
