@@ -6,23 +6,27 @@ const FancyText = ({ ParallaxMovement, isLargeScreen }) => {
     const variants = {
         initialOne: {
             clipPath: isLargeScreen ? "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" : "none",
-            y: isLargeScreen ? 200 : 50,
-            rotate: isLargeScreen ? 5 : 20,
+            y: isLargeScreen ? 200 : 0,
+            rotate: isLargeScreen ? 5 : 0,
+            opacity: isLargeScreen ? 1 : 0,
         },
         animateOne: {
             clipPath: isLargeScreen ? "polygon(0% 0%, 100% 0%, 100% 200%, 0% 200%)" : "none",
             y: 0,
             rotate: 0,
+            opacity: 1,
         },
         initialTwo: {
             clipPath: isLargeScreen ? "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)" : "none",
-            y: isLargeScreen ? -200 : -50,
-            rotate: isLargeScreen ? -5 : -20,
+            y: isLargeScreen ? -200 : 0,
+            rotate: isLargeScreen ? -5 : 0,
+            opacity: isLargeScreen ? 1 : 0,
         },
         animateTwo: {
             clipPath: isLargeScreen ? "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" : "none",
             y: 0,
             rotate: 0,
+            opacity: 1,
         }
     }
     const transitionTwo = {
