@@ -1,10 +1,10 @@
 import { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import "./Section_1.css";
-import FancyText from "./FancyTexts/FancyText";
-import BottomContent from "./BottomContents/BottomContent";
 import useAnimationScroll from "../../ANIMATIONS/useAnimationScroll";
 import { useClipPathAnimation } from "../../ANIMATIONS/useClipPathAnimation";
+import FancyText from "./FancyTexts/FancyText";
+import BottomContent from "./BottomContents/BottomContent";
 
 const Section_1 = () => {
     const sectionRef = useRef(null);
@@ -30,6 +30,7 @@ const Section_1 = () => {
 
             <div className="sec1Wrapper">
                 <FancyText ParallaxMovement={ParallaxMovement} isLargeScreen={isLargeScreen} />
+
                 <BottomContent ParallaxMovement={ParallaxMovement} isLargeScreen={isLargeScreen} />
             </div>
 

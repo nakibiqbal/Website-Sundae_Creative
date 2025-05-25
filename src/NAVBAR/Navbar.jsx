@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, Suspense } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import "./Navbar.css"
 import Menu from "./Menu/Menu"
 import MenuContent from "./Menu/MenuContent/MenuContent"
+import FallbackLogic from "../FallbackLogic"
 
 const Navbar = () => {
     const [onClick, setOnClick] = useState(false);
@@ -57,8 +58,12 @@ const Navbar = () => {
                 <AnimatePresence>
                     {onClick &&
                         <>
-                            <Menu />
-                            <MenuContent />
+                            <Suspense fallback={<FallbackLogic />}>
+                                <Menu />
+                            </Suspense>
+                            <Suspense fallback={<FallbackLogic />}>
+                                <MenuContent />
+                            </Suspense>
                         </>
                     }
                 </AnimatePresence>
