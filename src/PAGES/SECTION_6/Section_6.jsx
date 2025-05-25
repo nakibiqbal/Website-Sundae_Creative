@@ -1,6 +1,4 @@
 import Dynamic_Section from "../DYNAMIC_SECTION/Dynamic_Section"
-import imgLeft from "/Images/imgLeft.jpg"
-import oneMoreImg from "/Images/oneMoreImg.jpg"
 import "./Section_6.css"
 
 const Section_6 = () => {
@@ -12,8 +10,8 @@ const Section_6 = () => {
 
             <Dynamic_Section
                 reverseContent="reverseContent"
-                imgForTheRight={imgLeft}
-                oneMoreImg={oneMoreImg}
+                imgForTheRight="https://ik.imagekit.io/nakibKit/imgLeft.jpg?tr=f-auto,q-auto&updatedAt=1748144178084"
+                oneMoreImg="https://ik.imagekit.io/nakibKit/oneMoreImg.jpg?tr=f-auto,q-auto&updatedAt=1748144177888"
                 imgClassName="imgClassName"
                 textForTheLeft="textForTheLeft"
                 txtFTLeftEx="txtFTLeftEx"

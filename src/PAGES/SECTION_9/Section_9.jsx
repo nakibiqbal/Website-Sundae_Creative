@@ -1,5 +1,4 @@
 import Dynamic_Section from "../DYNAMIC_SECTION/Dynamic_Section"
-import ninthImg from "/Images/ninthImg.jpg"
 import "./Section_9.css"
 
 const Section_9 = () => {
@@ -12,7 +11,7 @@ const Section_9 = () => {
             <Dynamic_Section
                 textForTheLeft="textForTheLeft"
                 txtFTLeftEx2="txtFTLeftEx2"
-                imgForTheRight={ninthImg}
+                imgForTheRight="https://ik.imagekit.io/nakibKit/ninthImg.jpg?tr=f-auto,q-auto&updatedAt=1748144178120"
                 imgClassName="imgClassName"
                 text_one="WORK"
                 text_two="WHERE PR,"

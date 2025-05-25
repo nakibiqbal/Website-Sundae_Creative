@@ -1,9 +1,4 @@
 import { motion, useScroll } from "framer-motion";
-import pImg1 from "/Images/pImg1.jpg";
-import pImg2 from "/Images/pImg2.jpg";
-import pImg3 from "/Images/pImg3.jpg";
-import pImg4 from "/Images/pImg4.jpg";
-import pImg5 from "/Images/pImg5.jpg";
 import "./ImgSec2.css"
 import useAnimationScroll from "../../../ANIMATIONS/useAnimationScroll";
 import { useRef } from "react";
@@ -12,11 +7,11 @@ const ImgSec2 = () => {
     const imgSecRef = useRef(null);
 
     const images = [
-        { src: pImg4, className: "top-left", xAxis: "15vw" },
-        { src: pImg1, className: "top-right", xAxis: "-15vw" },
-        { src: pImg3, className: "center", scale: 0.5 },
-        { src: pImg5, className: "bottom-left", xAxis: "30vw", yAxis: "20vw" },
-        { src: pImg2, className: "bottom-right", xAxis: "-25vw", yAxis: "20vw" },
+        { src: "https://ik.imagekit.io/nakibKit/pImg4.jpg?tr=f-auto,q-auto&updatedAt=1748144182165", className: "top-left", xAxis: "15vw" },
+        { src: "https://ik.imagekit.io/nakibKit/pImg1.jpg?tr=f-auto,q-auto&updatedAt=1748144177954", className: "top-right", xAxis: "-15vw" },
+        { src: "https://ik.imagekit.io/nakibKit/pImg3.jpg?tr=f-auto,q-auto&updatedAt=1748144181293", className: "center", scale: 0.5 },
+        { src: "https://ik.imagekit.io/nakibKit/pImg5.jpg?tr=f-auto,q-auto&updatedAt=1748144182732", className: "bottom-left", xAxis: "30vw", yAxis: "20vw" },
+        { src: "https://ik.imagekit.io/nakibKit/pImg2.jpg?tr=f-auto,q-auto&updatedAt=1748144177950", className: "bottom-right", xAxis: "-25vw", yAxis: "20vw" },
     ];
 
     const { scrollYProgress } = useScroll({

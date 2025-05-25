@@ -2,7 +2,6 @@ import { useState, useEffect } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import "./Navbar.css"
 import Menu from "./Menu/Menu"
-import logo from "/Images/logo.png"
 import MenuContent from "./Menu/MenuContent/MenuContent"
 
 const Navbar = () => {
@@ -63,7 +62,7 @@ const Navbar = () => {
                         </>
                     }
                 </AnimatePresence>
-                <a href="#" onClick={(e) => e.preventDefault()}><img src={logo} /></a>
+                <a href="#" onClick={(e) => e.preventDefault()}><img src="https://ik.imagekit.io/nakibKit/logo.png?tr=f-auto,q-auto&updatedAt=1748144177443" /></a>
                 <a href="#" onClick={(e) => e.preventDefault()}>let&apos;s talk</a>
             </div>
         </section>

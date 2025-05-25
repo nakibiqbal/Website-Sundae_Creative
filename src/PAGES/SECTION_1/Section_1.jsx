@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import "./Section_1.css";
-import img2 from "/Images/img2.jpg";
 import FancyText from "./FancyTexts/FancyText";
 import BottomContent from "./BottomContents/BottomContent";
 import useAnimationScroll from "../../ANIMATIONS/useAnimationScroll";
@@ -24,7 +23,7 @@ const Section_1 = () => {
                     <motion.div
                         {...useClipPathAnimation}
                         ref={imgDivRef} style={{ overflow: "hidden" }}>
-                        <img ref={imgRef} src={img2} />
+                        <img ref={imgRef} src="https://ik.imagekit.io/nakibKit/img2.jpg?tr=f-auto,q-auto&updatedAt=1748144178322" />
                     </motion.div>
                 </div>
             </div>
