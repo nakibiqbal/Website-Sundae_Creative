@@ -58,22 +58,26 @@ const FancyText = ({ ParallaxMovement, isLargeScreen }) => {
                     generation
                 </motion.span>
             </div>
-            <div className="emni cd">
-                <motion.span variants={variants}
-                    initial="initialTwo"
-                    animate="animateTwo"
-                    transition={transitionTwo}>
+            <motion.div
+                variants={variants}
+                initial="initialTwo"
+                animate="animateTwo"
+                transition={transitionTwo}
+                className="emni cd">
+                <span>
                     communications
-                </motion.span>
-            </div>
-            <div className="emni cd">
-                <motion.span variants={variants}
-                    initial="initialTwo"
-                    animate="animateTwo"
-                    transition={transitionTwo}>
+                </span>
+            </motion.div>
+            <motion.div
+                variants={variants}
+                initial="initialTwo"
+                animate="animateTwo"
+                transition={transitionTwo}
+                className="emni cd">
+                <span>
                     agency
-                </motion.span>
-            </div>
+                </span>
+            </motion.div>
         </motion.div>)
 }
 

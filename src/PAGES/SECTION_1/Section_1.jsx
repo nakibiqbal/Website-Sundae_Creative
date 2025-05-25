@@ -1,16 +1,10 @@
-// import { Suspense, useRef, lazy } from "react";
 import { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import "./Section_1.css";
 import useAnimationScroll from "../../ANIMATIONS/useAnimationScroll";
 import { useClipPathAnimation } from "../../ANIMATIONS/useClipPathAnimation";
-// import FallbackLogic from "../../FallbackLogic";
 import FancyText from "./FancyTexts/FancyText";
 import BottomContent from "./BottomContents/BottomContent";
-
-// const FancyText = lazy(() => import("./FancyTexts/FancyText"));
-// const BottomContent = lazy(() => import("./BottomContents/BottomContent"));
-
 const Section_1 = () => {
     const sectionRef = useRef(null);
     const { scrollYProgress } = useScroll({
@@ -34,13 +28,8 @@ const Section_1 = () => {
             </div>
 
             <div className="sec1Wrapper">
-
-                {/* <Suspense fallback={<FallbackLogic />}> */}
                 <FancyText ParallaxMovement={ParallaxMovement} isLargeScreen={isLargeScreen} />
-                {/* </Suspense> */}
-                {/* <Suspense fallback={<FallbackLogic />}> */}
                 <BottomContent ParallaxMovement={ParallaxMovement} isLargeScreen={isLargeScreen} />
-                {/* </Suspense> */}
             </div>
 
         </section>
