@@ -1,5 +1,5 @@
 .customCursor {
-  position: absolute;
+  position: fixed;
   width: 65px;
   height: 65px;
   border: 1px solid #f34848;
